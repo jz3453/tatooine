@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+body
+{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, #3b2370,#636aaf,#fc8091,#fda86b, #fda86b, #fda86b, #fda86b, #ffbc8b, #ffbc8b, #ffbc8b, #ffbc8b);
+}
+a:link {
+    color: #fc8091;
+    text-decoration: none;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: #fc8091;
+    text-decoration: none;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: #fc8091;
+    text-decoration: underline;
+  }
+  
+  /* selected link */
+  a:active {
+    color: #fc8091;
+    text-decoration: none;
+  }
+header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+header .logo
+{
+    color: rgb(255, 222, 184);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+header ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li
+{
+    list-style: none;
+    margin-left: 20px;
+}
+header ul li a.active,
+header ul li a.bar
+{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: rgb(255, 222, 184);
+    border-radius: 20px;
+}
+
+header ul li a.bar:hover,
+header ul li a.active
+{
+    background: rgb(255, 222, 184);
+    color: #2b1055;
+}
+section
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+section::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #1b0708, transparent);
+    z-index: 1000;
+}
+section img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+section img#redsun
+{
+    position: relative;
+    top: -75px;
+    left: 370px;
+    width: 20%;
+    height: 20%;
+}
+section img#yellowsun
+{
+    position: relative;
+    top: -170px;
+    left: 490px;
+    width: 20%;
+    height: 20%;
+    
+}
+section img#dunes
+{
+    z-index: 8;
+
+}
+section img#building
+{
+    z-index: 10;
+
+}
+#text
+{
+    position: absolute;
+    top: 150px;
+    color: rgb(244, 170, 145);
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 9;
+}
+#btn
+{
+    position: absolute;
+    top: 300px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: rgb(214, 83, 69);
+    color: rgb(244, 170, 145);
+    font-size: 1.5em;
+    z-index: 9;
+}
+.sec
+{
+    position: relative;
+    padding: 100px;
+    background:#1b0708;
+}
+.sec h2
+{
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: rgb(244, 170, 145);
+}
+.sec p
+{
+    font-size: 1.2em;
+    color: rgb(244, 170, 145);
+}

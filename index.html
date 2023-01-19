@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Tatooine - Parallax Scrolling Website</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">Logo</a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#" class="bar">About</a></li>
+                <li><a href="#" class="bar">Work</a></li>
+                <li><a href="#" class="bar">Contact</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="images/dunes.png" id="dunes">
+            <img src="images/yellowsun.png" id="yellowsun">
+            <img src="images/redsun.png" id="redsun">
+            <h2 id="text">Tatooine</h2>
+            <a href="#sec" id="btn">Explore</a>
+            <img src="images/building.png" id="building">
+        </section>
+        <div class="sec" id="sec">
+            <h2>Tatooine</h2>
+            <p><a href="https://starwars.fandom.com/wiki/Tatooine">Tatooine</a> was a sparsely inhabited circumbinary desert planet located in the galaxy's Outer Rim Territories. Part of a binary star system, the planet orbited two scorching suns, resulting in the world lacking the necessary surface water to sustain large populations. As a result, many residents of the planet instead drew water from the atmosphere via moisture farms. The planet also had little surface vegetation. It was the homeworld to the native <a href="https://starwars.fandom.com/wiki/Jawa">Jawa</a> and <a href="https://starwars.fandom.com/wiki/Tusken_Raider">Tusken Raider</a> species and of <a href="https://starwars.fandom.com/wiki/Anakin_Skywalker">Anakin</a> and <a href="https://starwars.fandom.com/wiki/Luke_Skywalker">Luke Skywalker</a>, who would go on to shape galactic history.
+                <br><br>It saw a population explosion following the search for valuable mining deposits on the planet's silicate surface. Finding the ore to have undesirable metallurgical properties, mining firms left the planet en masse, leaving behind valuable equipment, most notably large sandcrawlers, which were later used by the Jawa population. The planet then became a haven for smugglers and criminal activity, and fell under the influence of the <a href="https://starwars.fandom.com/wiki/Hutt_Clan">Hutt Clan</a> while scattered, isolated settlements of hard-working inhabitants endured.
+                <br><br>Generally ignored by the galaxy at large, Tatooine gained the notice of the <a href="https://starwars.fandom.com/wiki/Galactic_Empire">Galactic Empire</a> during the <a href="https://starwars.fandom.com/wiki/Galactic_Civil_War">Galactic Civil War</a> when an escape pod carrying two droids in possession of <a href="https://starwars.fandom.com/wiki/Secret_mission_to_Tatooine">top-secret information</a> landed on the sandy Outer Rim world. The Empire went on to establish a heavier presence on the planet, forging a tenuous relationship with <a href="https://starwars.fandom.com/wiki/Jabba_Desilijic_Tiure">Jabba Desilijic Tiure</a> of the Hutt Clan. Open conflict soon broke out between the Empire and a Rebel Alliance cell on Tatooine that culminated in a battle that left the Empire's hold on the world significantly weakened.
+                <br><br>Following the death of Jabba and the withdrawal of Imperial forces after the <a href="https://starwars.fandom.com/wiki/Battle_of_Endor">Battle of Endor</a>, an enormous power vacuum occurred on the world, with numerous crime syndicates like the Red Key Raiders attempting to build legitimacy as mining companies. Eventually, former bounty hunter <a href="https://starwars.fandom.com/wiki/Boba_Fett">Boba Fett</a> returned and took over Jabba's former territory. Coming into conflict with both the Hutt Clan and the Pyke Syndicate, the new <a href="https://starwars.fandom.com/wiki/Daimyo">Daimyo</a> was pulled into a gang war that threatened the future of Tatooine. With help from the <a href="https://starwars.fandom.com/wiki/Mandalorian">Mandalorian</a> <a href="https://starwars.fandom.com/wiki/Din_Djarin">Din Djarin</a>, Fett rallied the denziens of the settlements <a href="https://starwars.fandom.com/wiki/Mos_Espa">Mos Espa</a> and <a href="https://starwars.fandom.com/wiki/Freetown">Freetown</a> to push back against the invaders, ushering in a new era of respect between the people of the planet.
+            </p>
+        </div>
+
+    
+
+        <script>
+            let redsun = document.getElementById('redsun');
+            let yellowsun = document.getElementById('yellowsun');
+            let dunes = document.getElementById('dunes');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let building = document.getElementById('building');
+
+            window.addEventListener('scroll', function() {
+                let value = window.scrollY;
+                redsun.style.top = (-75 + value * 1) + 'px';
+                yellowsun.style.top = (-170 + value * 1.25) + 'px';
+                dunes.style.top = value * 0.5 + 'px';
+                building.style.top = value * 0 + 'px';
+                text.style.top = (150 + value * 1) + 'px';
+                btn.style.marginTop = value * 1.2 + 'px';
+            })
+        </script>
+    </body>
+</html>
